@@ -1,0 +1,30 @@
+{
+    "manifest_version": 3,
+    "name": "DOM Inspector",
+    "version": "1.0",
+    "description": "Inspect DOM of any HTML Document with 1 click!",
+    "background": 
+    {
+      "service_worker": "background.js"
+    },
+    "permissions": 
+    [
+      "activeTab", 
+      "scripting",
+      "tabs"
+    ],
+    "action": {
+      "default_popup": "popup.html"
+      },
+    "content_scripts": [
+      {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+      }
+    ],
+    "icons" : {
+      "16" : "zero.png",
+      "32" : "zero.png",
+      "48" : "zero.png"
+    }
+}
